@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
   restoreLastViewedQuote(); // Restore the last viewed quote from session storage
 });
 
-// Function to save quotes to local storage
+// #3 Function to save quotes to local storage
 function saveQuotes() {
   localStorage.setItem("quotes", JSON.stringify(quotes));
 }
@@ -248,7 +248,7 @@ function filterQuotes() {
             <p><em>Category: ${quote.category}</em></p>
         `;
   } else {
-    document.getElementById("quoteDisplay").innerHTML =
+    document.getElementById("quoteDisplay").textContent =
       "<p>No quotes available in this category.</p>";
   }
 }
